@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZEROBASEONE - ZEROSE </title>
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="nav-list">
+            <li><a href="index.html">Home & Gift 🎁</a></li>
+            <li><a href="journey.html">History Journey 📜</a></li>
+        </ul>
+    </nav>
+
+    <div id="gift-overlay">
+        <div class="gift-box">🎁</div>
+        <p>Tap to open your gift</p>
+    </div>
+
+    <div id="letter-modal" class="hidden">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h2>💌 A Letter for ZB1</h2>
+            <div id="modal-text-body"></div>
+        </div>
+    </div>
+
+    <div id="member-modal" class="hidden">
+        <div class="member-card">
+            <span class="close-member" onclick="closeMemberModal()">&times;</span>
+            <div class="member-visual">
+                <img id="popup-img" src="" alt="Member Image">
+            </div>
+            <div class="member-info">
+                <h2 id="popup-name">Member Name</h2>
+                <p id="popup-role" class="role-badge">Leader</p>
+                
+                <div class="lyric-card">
+                    <i class="fa-solid fa-music icon-music"></i>
+                    <p id="popup-lyric" class="typewriter-text"></p>
+                    <div id="popup-song" class="song-title"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="concert-container">
+        
+        <button id="lightstick-btn" class="ls-btn">
+            <i class="fa-solid fa-bolt"></i> Lightstick: OFF
+        </button>
+
+        <button id="oracle-btn" class="oracle-btn" onclick="getHealingMessage()">
+            <i class="fa-solid fa-moon"></i> Need Healing?
+        </button>
+
+        <div class="content">
+            <h3 class="sub-title">OUR STORY WRITTEN IN STARS</h3>
+            
+            <div class="main-title glitched" data-text="MELODY OF OUR SEASON">MELODY OF<br>OUR SEASON</div>
+            
+            <p class="details">EVERY MOMENT IS A GIFT • FOREVER WITH ZEROBASEONE</p>
+            
+            <div class="zerose-msg">
+                ✨ THANK YOU FOR BEING OUR SPRING ✨<br>From ZEROSE with Endless Love
+            </div>
+        </div>
+
+        <div id="spotlight-container"></div> 
+        <div id="particle-container"></div> 
+        <div id="star-message-container"></div> 
+        <div id="cursor-trail-container"></div>
+
+        <div class="message-input-area">
+            <div class="input-wrapper">
+                <textarea id="user-msg" placeholder="Write a letter to ZB1..." oninput="checkWordCount()"></textarea>
+                <div id="word-counter">0 / 1000 Words</div>
+            </div>
+            <button onclick="sendMessage()">Send ⭐</button>
+        </div>
+
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

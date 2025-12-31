@@ -1,0 +1,383 @@
+/* ================= 1. FONTS & RESET ================= */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,900&display=swap');
+
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Montserrat', sans-serif; }
+body, html { width: 100%; height: 100%; overflow: hidden; background-color: #000; color: white; cursor: crosshair; }
+
+/* ================= 2. NAVIGATION (HAMBURGER MENU) ================= */
+.navbar {
+    position: fixed; top: 0; left: 0; width: 100%; z-index: 2000;
+    padding: 20px; display: flex; justify-content: flex-start;
+    pointer-events: none; /* Area kosong tembus klik */
+}
+
+/* Tombol Menu (Z-Index Paling Tinggi) */
+.menu-toggle {
+    display: flex; flex-direction: column; cursor: pointer; pointer-events: auto;
+    position: relative; z-index: 3000; 
+}
+.menu-toggle .bar {
+    width: 30px; height: 3px; background-color: #fff; margin: 4px 0;
+    transition: 0.4s; border-radius: 5px; box-shadow: 0 0 5px #00c3ff;
+}
+/* Animasi Hamburger ke X */
+.menu-toggle.active .bar:nth-child(1) { transform: rotate(-45deg) translate(-5px, 6px); background-color: #ffd700; }
+.menu-toggle.active .bar:nth-child(2) { opacity: 0; }
+.menu-toggle.active .bar:nth-child(3) { transform: rotate(45deg) translate(-5px, -6px); background-color: #ffd700; }
+
+/* Daftar Menu Slide */
+.nav-list {
+    position: fixed; top: 0; left: -100%; width: 250px; height: 100vh;
+    background: rgba(0, 0, 0, 0.95); backdrop-filter: blur(10px);
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    list-style: none; transition: 0.4s ease; border-right: 2px solid #00c3ff;
+    box-shadow: 5px 0 15px rgba(0, 195, 255, 0.2); pointer-events: auto;
+    z-index: 2500; /* Di bawah tombol menu */
+}
+.nav-list.active { left: 0; }
+.nav-list li { margin: 20px 0; }
+.nav-list a {
+    text-decoration: none; color: white; font-size: 1.2rem; font-weight: bold;
+    text-transform: uppercase; letter-spacing: 2px; transition: 0.3s;
+}
+.nav-list a:hover { color: #ffd700; text-shadow: 0 0 10px #ffd700; }
+
+/* ================= 3. HOME PAGE: CONCERT CONTAINER ================= */
+.concert-container {
+    position: relative; width: 100%; height: 100vh;
+    background: radial-gradient(ellipse at bottom, #0b1a3a 0%, #000000 100%);
+    display: flex; flex-direction: column; align-items: center; text-align: center; z-index: 1;
+}
+
+/* Lightstick Flash Effect */
+.concert-container::after {
+    content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    pointer-events: none; z-index: 5; opacity: 0; transition: opacity 0.3s;
+    mix-blend-mode: overlay;
+}
+.concert-container.party-mode::after { animation: concertFlash 0.6s infinite; opacity: 0.7; }
+@keyframes concertFlash {
+    0%, 50%, 100% { background-color: transparent; }
+    25% { background-color: rgba(0, 195, 255, 0.8); }
+    75% { background-color: rgba(255, 105, 180, 0.8); }
+}
+
+/* Titles & Text */
+.content { margin-top: 60px; z-index: 20; position: relative; pointer-events: none; }
+.sub-title { font-size: 1.2rem; letter-spacing: 3px; color: #bfefff; text-shadow: 0 0 10px rgba(0, 195, 255, 0.6); margin-bottom: 5px; }
+.main-title { font-size: 5rem; font-weight: 900; font-style: italic; line-height: 0.9; margin: 15px 0; text-transform: uppercase; color: #ffffff; text-shadow: 0 0 10px #fff, 0 0 20px #00c3ff, 0 0 40px #006eff; }
+.details { font-size: 1rem; letter-spacing: 4px; color: #8ed1fc; margin-bottom: 30px; }
+.zerose-msg { margin-top: 20px; padding: 10px 30px; border: 1px solid rgba(255, 215, 0, 0.5); border-radius: 50px; background: rgba(0, 0, 0, 0.5); display: inline-block; color: #ffd700; box-shadow: 0 0 15px rgba(255, 215, 0, 0.2); }
+
+/* Glitch Effect */
+.main-title.glitched { position: relative; animation: glitchSkew 3s infinite linear alternate-reverse; }
+.main-title.glitched::before, .main-title.glitched::after { content: attr(data-text); position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0.8; }
+.main-title.glitched::before { color: #00c3ff; z-index: -1; animation: glitchAnim 3s infinite linear alternate-reverse; }
+.main-title.glitched::after { color: #ff00c8; z-index: -2; animation: glitchAnim 2s infinite linear alternate; }
+@keyframes glitchAnim { 0% { clip-path: inset(40% 0 61% 0); transform: translate(-2px, 2px); } 20% { clip-path: inset(92% 0 1% 0); transform: translate(2px, -1px); } 40% { clip-path: inset(43% 0 1% 0); transform: translate(-1px, 2px); } 60% { clip-path: inset(25% 0 58% 0); transform: translate(1px, 1px); } 80% { clip-path: inset(54% 0 7% 0); transform: translate(2px, -2px); } 100% { clip-path: inset(58% 0 43% 0); transform: translate(-2px, 1px); } }
+@keyframes glitchSkew { 0% { transform: skew(1deg); } 10% { transform: skew(-1deg); } 20% { transform: skew(0.5deg); } 30% { transform: skew(-0.5deg); } 100% { transform: skew(0deg); } }
+
+/* ================= 4. UI BUTTONS ================= */
+.music-btn { position: fixed; top: 20px; right: 20px; background: rgba(0, 0, 0, 0.6); color: #00c3ff; border: 2px solid #00c3ff; padding: 10px 20px; border-radius: 30px; cursor: pointer; z-index: 100; font-weight: bold; transition: 0.3s; }
+.music-btn:hover { background: #00c3ff; color: white; box-shadow: 0 0 15px #00c3ff; }
+
+.ls-btn { position: fixed; top: 70px; right: 20px; background: rgba(0, 0, 0, 0.6); color: #ff69b4; border: 2px solid #ff69b4; padding: 10px 20px; border-radius: 30px; cursor: pointer; z-index: 100; font-weight: bold; transition: 0.3s; }
+.ls-btn:hover { background: #ff69b4; color: white; box-shadow: 0 0 15px #ff69b4; }
+.ls-btn.active { background: #ff69b4; color: white; box-shadow: 0 0 20px #ff69b4; }
+
+/* ================= 5. ZERONI BUBBLES ================= */
+.zeroni-bubble {
+    position: absolute; width: 110px; height: 110px;
+    border-radius: 50%; overflow: hidden; border: 3px solid #fff;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8), 0 0 30px rgba(0, 195, 255, 0.6);
+    background: rgba(255, 255, 255, 0.9); cursor: grab; z-index: 15;
+    top: 50%; left: 50%; transform: translate(-50%, -50%) scale(0);
+    opacity: 0; transition: all 1.2s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.zeroni-bubble.dragging { transition: none !important; cursor: grabbing !important; z-index: 1000; transform: translate(-50%, -50%) scale(1.1); }
+.zeroni-bubble img { width: 100%; height: 100%; object-fit: cover; }
+.zeroni-bubble.spread { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+.zeroni-bubble.floating { animation: driftFlow 15s linear infinite; }
+@keyframes driftFlow {
+    0% { transform: translate(-50%, -50%) rotate(-5deg); }
+    50% { transform: translate(-50%, -50%) translate(40px, -40px) rotate(5deg); }
+    100% { transform: translate(-50%, -50%) translate(80px, -50px) rotate(-5deg); }
+}
+
+/* ================= 6. MESSAGE INPUT & MODAL ================= */
+.message-input-area {
+    position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%);
+    width: 90%; max-width: 500px; display: flex; align-items: flex-end; gap: 10px; z-index: 100;
+    background: rgba(0, 0, 0, 0.85); padding: 15px; border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3); backdrop-filter: blur(10px);
+}
+.input-wrapper { flex: 1; display: flex; flex-direction: column; }
+.message-input-area textarea {
+    width: 100%; height: 60px; padding: 10px; border-radius: 10px; border: none; outline: none;
+    background: rgba(255, 255, 255, 0.1); color: white; font-family: 'Montserrat', sans-serif; resize: none;
+}
+#word-counter { font-size: 0.75rem; color: #ffd700; margin-top: 5px; text-align: right; }
+.message-input-area button {
+    height: 50px; padding: 0 20px; border-radius: 15px; border: none;
+    background: #ffd700; color: black; font-weight: bold; cursor: pointer; transition: 0.3s;
+}
+.message-input-area button:hover { transform: scale(1.05); }
+
+/* Modal */
+#letter-modal {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.85); z-index: 200; display: flex; justify-content: center; align-items: center;
+    opacity: 0; pointer-events: none; transition: opacity 0.3s;
+}
+#letter-modal.visible { opacity: 1; pointer-events: auto; }
+.modal-content {
+    background: linear-gradient(135deg, #fff, #f0f8ff); width: 90%; max-width: 600px; max-height: 80vh;
+    padding: 30px; border-radius: 20px; color: #333; overflow-y: auto; text-align: left;
+    border: 3px solid #ffd700; position: relative;
+}
+.close-btn { position: absolute; top: 15px; right: 20px; font-size: 2rem; cursor: pointer; color: #aaa; }
+
+/* ================= 7. GLOBAL EFFECTS (STARS/METEORS) ================= */
+#spotlight-container, #particle-container, #star-message-container, #cursor-trail-container {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none;
+}
+#star-message-container { z-index: 10; }
+#cursor-trail-container { z-index: 50; }
+
+.bg-star { position: absolute; background: white; border-radius: 50%; animation: twinkleAnim infinite alternate; }
+.msg-star { position: absolute; font-size: 24px; color: #ffd700; cursor: pointer; pointer-events: auto; animation: twinkle 2s infinite alternate; text-shadow: 0 0 10px gold; z-index: 50; }
+.msg-star:hover { transform: scale(1.5); }
+.meteor-effect { position: absolute; width: 2px; height: 120px; background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,1)); transform: rotate(45deg); opacity: 0; }
+.trail-sparkle { position: absolute; width: 8px; height: 8px; background: #ffd700; border-radius: 50%; box-shadow: 0 0 10px #ffd700; animation: fadeOutTrail 0.8s linear forwards; }
+.spotlight { position: absolute; bottom: -20%; left: 50%; width: 150%; height: 150%; background: conic-gradient(from 180deg at 50% 100%, rgba(0, 195, 255, 0.15) 0deg, transparent 30deg, transparent 330deg, rgba(0, 110, 255, 0.15) 360deg); transform-origin: bottom center; filter: blur(30px); animation: spotlightMove 15s ease-in-out infinite alternate; }
+
+@keyframes twinkle { from { opacity: 0.5; scale: 1; } to { opacity: 1; scale: 1.3; } }
+@keyframes twinkleAnim { 0% { opacity: 0.2; scale: 0.8; } 100% { opacity: 1; scale: 1.2; } }
+@keyframes meteorShoot { 0% { transform: translate(0, 0) rotate(45deg); opacity: 1; } 100% { transform: translate(800px, 800px) rotate(45deg); opacity: 0; } }
+@keyframes fadeOutTrail { 0% { opacity: 1; scale: 1; } 100% { opacity: 0; scale: 0.2; transform: translateY(20px); } }
+@keyframes spotlightMove { 0% { transform: translateX(-50%) rotate(-15deg); opacity: 0.5; } 100% { transform: translateX(-50%) rotate(15deg); opacity: 1; } }
+
+#gift-overlay { position: fixed; inset: 0; background: radial-gradient(circle, #1a1a1a 30%, #000 90%); display: flex; flex-direction: column; justify-content: center; align-items: center; z-index: 9999; cursor: pointer; transition: opacity 0.5s ease; }
+.gift-box { font-size: 80px; margin-bottom: 20px; animation: pulseGift 1.5s infinite; }
+@keyframes pulseGift { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.1); } }
+#gift-overlay p { font-size: 1.2rem; letter-spacing: 2px; color: #ffd700; animation: blink 2s infinite; }
+@keyframes blink { 50% { opacity: 0.5; } }
+
+/* ================= 8. JOURNEY PAGE: PREMIUM CINEMA MODE ================= */
+
+/* Wrapper Utama (Full Screen) */
+.cinema-wrapper {
+    position: relative; width: 100%; height: 100vh; overflow: hidden;
+    background: #000; display: flex; justify-content: center; align-items: center;
+}
+
+/* Background Blur Dinamis */
+.cinema-bg {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    background-size: cover; background-position: center;
+    filter: blur(20px) brightness(0.4); transform: scale(1.1);
+    transition: background-image 0.5s ease-in-out; z-index: 0;
+}
+.cinema-overlay {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    background: radial-gradient(circle, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.9) 100%);
+    z-index: 1; pointer-events: none;
+}
+
+/* Container Konten */
+.cinema-container {
+    position: relative; z-index: 10; width: 90%; max-width: 1000px; height: 100vh;
+    display: flex; flex-direction: column; justify-content: center; align-items: center;
+    padding-top: 60px; overflow-y: auto;
+}
+
+/* Header Slide */
+.cinema-header { text-align: center; margin-bottom: 20px; animation: fadeInDown 0.8s ease; }
+.year-badge {
+    background: #ffd700; color: #000; padding: 5px 20px; border-radius: 30px;
+    font-weight: 800; font-size: 1.1rem; box-shadow: 0 0 15px rgba(255, 215, 0, 0.6);
+    display: inline-block; margin-bottom: 15px;
+}
+#cinema-title {
+    font-size: 2.2rem; text-transform: uppercase; color: #fff;
+    text-shadow: 0 0 20px #00c3ff; margin: 0; letter-spacing: 2px;
+}
+
+/* Stage (Gambar + Tombol) */
+.cinema-stage { display: flex; align-items: center; justify-content: center; width: 100%; gap: 30px; margin-bottom: 25px; }
+
+/* Bingkai Gambar */
+.visual-box {
+    width: 100%; max-width: 700px; aspect-ratio: 16/9; border-radius: 20px;
+    overflow: hidden; position: relative; border: 3px solid rgba(255,255,255,0.2);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.7); background: #000;
+}
+.visual-box img { width: 100%; height: 100%; object-fit: cover; transition: opacity 0.5s ease; }
+.visual-box img.img-loading { opacity: 0; }
+
+/* Loader Spinner */
+.loader {
+    position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+    width: 50px; height: 50px; border: 5px solid rgba(255,255,255,0.2);
+    border-top: 5px solid #ffd700; border-radius: 50%;
+    animation: spin 1s linear infinite; display: none;
+}
+.visual-box.is-loading .loader { display: block; }
+@keyframes spin { 100% { transform: translate(-50%, -50%) rotate(360deg); } }
+
+/* Tombol Navigasi */
+.nav-btn {
+    background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #fff; width: 60px; height: 60px; border-radius: 50%; font-size: 1.5rem;
+    cursor: pointer; transition: all 0.3s; backdrop-filter: blur(5px);
+    display: flex; justify-content: center; align-items: center;
+}
+.nav-btn:hover { background: #00c3ff; box-shadow: 0 0 20px #00c3ff; transform: scale(1.1); }
+
+/* Deskripsi Box */
+.cinema-desc-box {
+    background: rgba(0, 0, 0, 0.6); backdrop-filter: blur(15px);
+    padding: 25px; border-radius: 20px; width: 100%; max-width: 800px;
+    text-align: center; border: 1px solid rgba(255, 255, 255, 0.15);
+    margin-bottom: 25px; animation: fadeInUp 0.8s ease;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+#cinema-desc { color: #f0f0f0; font-size: 1.1rem; line-height: 1.6; margin: 0; }
+
+/* Indikator Titik */
+.timeline-indicators { display: flex; gap: 12px; margin-bottom: 30px; flex-wrap: wrap; justify-content: center; }
+.dot {
+    width: 12px; height: 12px; background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%; cursor: pointer; transition: all 0.3s;
+}
+.dot.active { background: #ffd700; transform: scale(1.5); box-shadow: 0 0 10px #ffd700; }
+
+/* Footer Actions */
+.cinema-actions .action-btn {
+    display: inline-block; padding: 12px 30px; background: transparent;
+    border: 2px solid #fff; color: #fff; text-decoration: none;
+    border-radius: 50px; font-weight: bold; transition: 0.3s;
+    text-transform: uppercase; letter-spacing: 1px;
+}
+.cinema-actions .action-btn:hover { background: #fff; color: #000; box-shadow: 0 0 25px rgba(255,255,255,0.6); }
+
+/* Animations */
+@keyframes fadeInDown { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
+/* Responsif HP */
+@media (max-width: 768px) {
+    .main-title { font-size: 3rem; }
+    .zeroni-bubble { width: 85px; height: 85px; }
+    .message-input-area { width: 95%; bottom: 20px; }
+    
+    /* Cinema HP */
+    .cinema-container { height: auto; padding-bottom: 50px; display: block; }
+    .cinema-stage { flex-direction: column; gap: 15px; position: relative; }
+    .visual-box { width: 100%; aspect-ratio: 4/3; }
+    .nav-btn { position: absolute; top: 40%; z-index: 20; width: 45px; height: 45px; font-size: 1rem; }
+    .prev { left: 0; } .next { right: 0; }
+    #cinema-title { font-size: 1.5rem; }
+    .cinema-desc-box { padding: 15px; font-size: 0.9rem; }
+
+    /* Penyesuaian Pop-up di HP agar tidak terlalu lebar */
+    .member-card {
+        width: 85%; /* Sedikit lebih kecil dari layar penuh */
+        padding: 20px; /* Padding lebih kecil */
+    }
+    #popup-name { font-size: 1.5rem; } /* Nama member lebih kecil */
+    .member-visual { width: 100px; height: 100px; } /* Foto lebih kecil */
+}
+
+/* ================= 11. MEMBER PROFILE POP-UP (NEW) ================= */
+#member-modal {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.8); z-index: 2000; /* Paling atas */
+    display: flex; justify-content: center; align-items: center;
+    opacity: 0; pointer-events: none; transition: opacity 0.3s;
+    backdrop-filter: blur(8px);
+}
+#member-modal.visible { opacity: 1; pointer-events: auto; }
+
+.member-card {
+    background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05));
+    border: 1px solid rgba(255,255,255,0.2);
+    width: 90%; max-width: 400px;
+    border-radius: 25px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 0 50px rgba(0, 195, 255, 0.3);
+    position: relative;
+    transform: scale(0.8); transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+#member-modal.visible .member-card { transform: scale(1); }
+
+/* Tombol Close */
+.close-member {
+    position: absolute; top: 15px; right: 20px; font-size: 2rem;
+    color: #fff; cursor: pointer; transition: 0.3s; z-index: 10;
+}
+.close-member:hover { color: #ff4444; transform: rotate(90deg); }
+
+/* Foto Member di Tengah */
+.member-visual {
+    width: 120px; height: 120px; margin: 0 auto 20px;
+    border-radius: 50%; overflow: hidden;
+    border: 4px solid #ffd700;
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+}
+.member-visual img { width: 100%; height: 100%; object-fit: cover; }
+
+/* Teks Info */
+#popup-name { font-size: 2rem; color: #fff; margin-bottom: 5px; text-transform: uppercase; text-shadow: 0 0 10px #00c3ff; }
+.role-badge { 
+    display: inline-block; background: rgba(0, 195, 255, 0.2); color: #00c3ff; 
+    padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; font-weight: bold; margin-bottom: 15px; 
+}
+#popup-bio { color: #ddd; font-size: 0.95rem; line-height: 1.5; margin-bottom: 20px; }
+
+/* Kotak Pesan */
+.quote-box {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px; border-radius: 15px;
+    color: #ffd700; font-style: italic; font-size: 1rem;
+}
+.quote-box i { font-size: 0.8rem; opacity: 0.7; margin: 0 5px; }
+
+/* ================= 13. LYRIC CARD STYLE ================= */
+.lyric-card {
+    margin-top: 20px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.05); /* Transparan halus */
+    border-radius: 15px;
+    border-left: 4px solid #ffd700; /* Aksen emas di kiri */
+    text-align: center;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.icon-music {
+    color: #00c3ff; 
+    font-size: 1.2rem; 
+    margin-bottom: 10px;
+    display: block;
+}
+
+.typewriter-text {
+    font-family: 'Georgia', serif; /* Font serif agar puitis */
+    font-style: italic;
+    font-size: 1.1rem;
+    color: #fff;
+    line-height: 1.6;
+    min-height: 60px; /* Jaga tinggi agar tidak goyang saat mengetik */
+    text-shadow: 0 0 5px rgba(255,255,255,0.3);
+}
+
+.song-title {
+    margin-top: 15px;
+    font-size: 0.8rem;
+    color: #aaa;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+}

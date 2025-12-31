@@ -1,0 +1,736 @@
+{
+    "zeroni_binini_2.jpg": {
+        "name": "Sung Hanbin",
+        "image": "hanbin.jpg", 
+        "role": "All-Rounder Leader · Warm Center · Emotional Anchor",
+        "lyrics": [
+            {
+                "song": "In Bloom",
+                "text": "I'm running to you, shining brighter than anyone"
+            },
+            {
+                "song": "New Kidz on the Block",
+                "text": "Call my name, I'll be there wherever you are"
+            },
+            {
+                "song": "Back to ZEROBASE",
+                "text": "From zero, we rise together as one"
+            },
+            {
+                "song": "And I",
+                "text": "With you, I finally found my place"
+            },
+            {
+                "song": "CRUSH (가시와운)",
+                "text": "Even if it changes, there's no doubt, I'll save you"
+            },
+            {
+                "song": "Melting Point",
+                "text": "Your warmth slowly melts my frozen heart"
+            },
+            {
+                "song": "Good Night",
+                "text": "I'll stay with you until the night fades away"
+            },
+            {
+                "song": "HELLO",
+                "text": "Every step we take feels warm and true"
+            },
+            {
+                "song": "Feel the POP",
+                "text": "Just feel the moment, let your heart decide"
+            },
+            {
+                "song": "Dear ECLIPSE",
+                "text": "Even in the dark, I will stay by your side"
+            },
+            {
+                "song": "Cinema Paradise",
+                "text": "This moment feels like a movie made for us"
+            },
+            {
+                "song": "Take My Hand",
+                "text": "Don't be afraid, I'll lead you home"
+            },
+            {
+                "song": "Yura Yura",
+                "text": "Our hearts sway softly, side by side"
+            },
+            {
+                "song": "Only One Story",
+                "text": "This story exists because of you"
+            },
+            {
+                "song": "Blue Paradise",
+                "text": "Even in blue moments, we find our light"
+            },
+            {
+                "song": "Never Say Never",
+                "text": "I won't let go, not now, not ever"
+            },
+            {
+                "song": "Promise",
+                "text": "This promise will never fade away"
+            }
+        ]
+    },
+    "zeroni_woongnini_2.jpg": {
+        "name": "Kim Jiwoong",
+        "image": "jiwoong.jpeg",
+        "role": "Eternal Hyung · Mature Charisma · Emotional Protector",
+        "lyrics": [
+            {
+                "song": "Back to ZEROBASE",
+                "text": "Can I touch your heart? I want to be your only one"
+            },
+            {
+                "song": "In Bloom",
+                "text": "I'll stay right here as we bloom together"
+            },
+            {
+                "song": "And I",
+                "text": "Don't be afraid, just hold my hand tight"
+            },
+            {
+                "song": "Our Season",
+                "text": "Like a movie, our story begins now"
+            },
+            {
+                "song": "Always",
+                "text": "No matter where you go, I'll be there"
+            },
+            {
+                "song": "CRUSH (가시와운)",
+                "text": "Even if it hurts, I will stand by you"
+            },
+            {
+                "song": "Melting Point",
+                "text": "Your warmth slowly breaks my walls"
+            },
+            {
+                "song": "Good Night",
+                "text": "Rest now, I'll stay until you fall asleep"
+            },
+            {
+                "song": "Kidz Zone",
+                "text": "I'll watch over you from behind"
+            },
+            {
+                "song": "HELLO",
+                "text": "I found comfort when you smiled at me"
+            },
+            {
+                "song": "Feel the POP",
+                "text": "Even in chaos, I keep you safe"
+            },
+            {
+                "song": "Dear ECLIPSE",
+                "text": "I'll stay, even when the light disappears"
+            },
+            {
+                "song": "Cinema Paradise",
+                "text": "Every scene feels deeper when I'm with you"
+            },
+            {
+                "song": "Take My Hand",
+                "text": "If you hesitate, lean on me"
+            },
+            {
+                "song": "Road Movie",
+                "text": "I'll drive through the night for you"
+            },
+            {
+                "song": "Yura Yura",
+                "text": "I’ll protect this fragile moment"
+            },
+            {
+                "song": "Only One Story",
+                "text": "This story lasts because we trust each other"
+            },
+            {
+                "song": "Take It Slow",
+                "text": "It's okay to breathe, I'm here"
+            },
+            {
+                "song": "Blue Paradise",
+                "text": "Even in silence, I'm right beside you"
+            },
+            {
+                "song": "Never Say Never",
+                "text": "I'll endure until the very end"
+            },
+            {
+                "song": "Here & Now",
+                "text": "Right now, I'll stand in front of you"
+            }
+        ]
+    },
+    "zeroni_hanini_2.jpg": {
+        "name": "Zhang Hao",
+        "image": "zhang_hao.jpeg",
+        "role": "Musical Genius · Artistic Soul · Emotional Storyteller",
+        "lyrics": [
+            {
+                "song": "In Bloom",
+                "text": "The wait is over, now it's our time"
+            },
+            {
+                "song": "Back to ZEROBASE",
+                "text": "We draw tomorrow from nothing at all"
+            },
+            {
+                "song": "And I",
+                "text": "Your voice colors my quiet night"
+            },
+            {
+                "song": "Our Season",
+                "text": "Every melody reminds me of you"
+            },
+            {
+                "song": "Always",
+                "text": "Even the quiet moments sing with you"
+            },
+            {
+                "song": "Melting Point",
+                "text": "Your warmth turns silence into a song"
+            },
+            {
+                "song": "CRUSH (가시와운)",
+                "text": "My heart trembles like a string pulled tight"
+            },
+            {
+                "song": "Good Night",
+                "text": "This soft melody will carry you to sleep"
+            },
+            {
+                "song": "Kidz Zone",
+                "text": "Laughter flows like a playful tune"
+            },
+            {
+                "song": "HELLO",
+                "text": "Every sound feels brighter when you're near"
+            },
+            {
+                "song": "Feel the POP",
+                "text": "Let the rhythm paint your heart"
+            },
+            {
+                "song": "Dear ECLIPSE",
+                "text": "Even shadows have their own harmony"
+            },
+            {
+                "song": "Cinema Paradise",
+                "text": "This melody feels like a scene I'll remember"
+            },
+            {
+                "song": "Take My Hand",
+                "text": "Follow this song, I'll lead the way"
+            },
+            {
+                "song": "Road Movie",
+                "text": "Each step plays like a moving score"
+            },
+            {
+                "song": "Yura Yura",
+                "text": "I want to paint your world with my color"
+            },
+            {
+                "song": "Future Perfect",
+                "text": "Tomorrow sounds brighter than today"
+            },
+            {
+                "song": "Only One Story",
+                "text": "This song exists because of you"
+            },
+            {
+                "song": "Prezent",
+                "text": "This moment is the music we share"
+            },
+            {
+                "song": "Blue Paradise",
+                "text": "Blue feelings turn into beautiful sounds"
+            },
+            {
+                "song": "Always (Solo)",
+                "text": "Always, I will be always by your side"
+            },
+            {
+                "song": "Never Say Never",
+                "text": "Our voices rise, stronger than fear"
+            }
+        ]
+    },
+    "zeroni_thwenini_2.jpg": {
+        "name": "Seok Matthew",
+        "image": "matthew.jpg",
+        "role": "Sunshine Smile · Mood Maker · Warm Hearted Boy",
+        "lyrics": [
+            {
+                "song": "In Bloom",
+                "text": "I want to be your favorite boy"
+            },
+            {
+                "song": "Back to ZEROBASE",
+                "text": "Laughing together, even from zero"
+            },
+            {
+                "song": "New Kidz on the Block",
+                "text": "We shine together, just the way we are"
+            },
+            {
+                "song": "And I",
+                "text": "Your smile stays with me all night"
+            },
+            {
+                "song": "Our Season",
+                "text": "This season feels warmer with you"
+            },
+            {
+                "song": "Melting Point",
+                "text": "Your smile melts my frozen heart"
+            },
+            {
+                "song": "CRUSH (가시와운)",
+                "text": "Even my nervous heart starts smiling"
+            },
+            {
+                "song": "Good Night",
+                "text": "Sleep tight with a smile on your face"
+            },
+            {
+                "song": "HELLO",
+                "text": "Just saying hi makes my day brighter"
+            },
+            {
+                "song": "Feel the POP",
+                "text": "Let’s dance and laugh without worries"
+            },
+            {
+                "song": "Good So Bad",
+                "text": "Smiling for you, that's my happiness"
+            },
+            {
+                "song": "Cinema Paradise",
+                "text": "This scene feels brighter because of you"
+            },
+            {
+                "song": "Take My Hand",
+                "text": "Don’t worry, I’m right here"
+            },
+            {
+                "song": "Dear ECLIPSE",
+                "text": "Even in the dark, I’ll shine for you"
+            },
+            {
+                "song": "Yura Yura",
+                "text": "My heart sways whenever you smile"
+            },
+            {
+                "song": "Only One Story",
+                "text": "Your smile is part of my story"
+            },
+            {
+                "song": "Blue Paradise",
+                "text": "Even blue days shine when you smile"
+            },
+            {
+                "song": "Never Say Never",
+                "text": "We’ll laugh louder than our fears"
+            }
+        ]
+    },
+    "zeroni_taenini_2.jpg": {
+        "name": "Kim Taerae",
+        "image": "taerae.jpg",
+        "role": "Golden Voice · Emotional Vocalist · Heartfelt Storyteller",
+        "lyrics": [
+            {
+                "song": "In Bloom",
+                "text": "Every day, every night, I am running to you"
+            },
+            {
+                "song": "Back to ZEROBASE",
+                "text": "From nothing, our voices become one"
+            },
+            {
+                "song": "And I",
+                "text": "My voice stays where your heart is"
+            },
+            {
+                "song": "Our Season",
+                "text": "This melody feels like our time"
+            },
+            {
+                "song": "New Kidz on the Block",
+                "text": "Sing it loud, this is our moment"
+            },
+            {
+                "song": "Melting Point",
+                "text": "Your name echoes softly in my song"
+            },
+            {
+                "song": "CRUSH (가시와운)",
+                "text": "My heart breaks every time I sing your name"
+            },
+            {
+                "song": "Good Night",
+                "text": "Close your eyes, my voice will stay"
+            },
+            {
+                "song": "HELLO",
+                "text": "Every word I sing reaches you"
+            },
+            {
+                "song": "Feel the POP",
+                "text": "My voice colors the rhythm tonight"
+            },
+            {
+                "song": "Love or Die",
+                "text": "My voice will reach you, no matter how far"
+            },
+            {
+                "song": "Cinema Paradise",
+                "text": "This song feels like a scene that stays"
+            },
+            {
+                "song": "Take My Hand",
+                "text": "Follow my voice, don’t be afraid"
+            },
+            {
+                "song": "Dear ECLIPSE",
+                "text": "Even in silence, my voice remembers you"
+            },
+            {
+                "song": "Yura Yura",
+                "text": "My heart trembles every time I sing"
+            },
+            {
+                "song": "Only One Story",
+                "text": "This song is written with my heart"
+            },
+            {
+                "song": "Take It Slow",
+                "text": "Let my voice rest beside you"
+            },
+            {
+                "song": "Blue Paradise",
+                "text": "Blue feelings flow through my voice"
+            },
+            {
+                "song": "Never Say Never",
+                "text": "Our voices rise above the pain"
+            },
+            {
+                "song": "Promise",
+                "text": "This song is my promise to you"
+            }
+        ]
+    },
+    "zeroni_rinini_2.jpg": {
+        "name": "Ricky",
+        "image": "ricky.jpeg",
+        "role": "Young & Rich, Tall & Handsome",
+        "lyrics": [
+            { 
+                "text": "Catch my heart if you can. Keep watching me.", 
+                "song": "Take My Hand" 
+            },
+            { 
+                "text": "Is it New Year? No, it's New Me.", 
+                "song": "Back to ZEROBASE" 
+            },
+            { 
+                "text": "You make me so supernatural.", 
+                "song": "CRUSH" 
+            },
+            { 
+                "text": "Action, camera, rolling. Cause I'm the main character.", 
+                "song": "Road Movie" 
+            },
+            { 
+                "text": "My day begins and ends with you.", 
+                "song": "In Bloom" 
+            },
+            {
+                "text": "Baby, I'm falling for you. Yura yura baby.",
+                "song": "YURA YURA (Japanese)"
+            },
+            {
+                "text": "Bye bye Romeo. I'm the only one who fits you perfectly.",
+                "song": "KILL THE ROMEO"
+            },
+            {
+                "text": "Let's drive away, anywhere is fine. Just enjoy the ride.",
+                "song": "Sunday RIDE"
+            },
+            {
+                "text": "In the deepening darkness, I'll be the light that finds you.",
+                "song": "Dear ECLIPSE"
+            },
+            {
+                "text": "No hesitation, high tension. Feel the heat.",
+                "song": "SWEAT"
+            },
+            {
+                "text": "Even if the world says no, I choose you. That's my answer.",
+                "song": "GOOD SO BAD"
+            },
+            {
+                "text": "We're the new kidz on the block. We gon' change the game.",
+                "song": "New Kidz on the Block"
+            }
+        ]
+    },
+    "zeroni_gyunini_2.jpg": {
+        "name": "Kim Gyuvin",
+        "image": "gyubin.jpg",
+        "role": "Energy Source · Youthful Power · Playful Performer",
+        "lyrics": [
+            {
+                "song": "In Bloom",
+                "text": "Running freely, this is our youth"
+            },
+            {
+                "song": "New Kidz on the Block",
+                "text": "Let's dance together under the starlight"
+            },
+            {
+                "song": "Back to ZEROBASE",
+                "text": "Laugh it off, we’ll figure it out"
+            },
+            {
+                "song": "Our Season",
+                "text": "Every day feels brighter when we move together"
+            },
+            {
+                "song": "And I",
+                "text": "Your laugh echoes in my heart"
+            },
+            {
+                "song": "Melting Point",
+                "text": "Your energy pulls me closer"
+            },
+            {
+                "song": "CRUSH (가시와운)",
+                "text": "My heartbeat follows your rhythm"
+            },
+            {
+                "song": "Good Night",
+                "text": "Even after the lights fade, we smile"
+            },
+            {
+                "song": "HELLO",
+                "text": "Say my name, I’ll come running"
+            },
+            {
+                "song": "Good So Bad",
+                "text": "You make me feel so good, so good so bad"
+            },
+            {
+                "song": "Feel the POP",
+                "text": "Jump into the rhythm with me"
+            },
+            {
+                "song": "Cinema Paradise",
+                "text": "This moment feels alive like a scene"
+            },
+            {
+                "song": "Take My Hand",
+                "text": "Come with me, don’t think too much"
+            },
+            {
+                "song": "Dear ECLIPSE",
+                "text": "Even shadows dance when we move"
+            },
+            {
+                "song": "Yura Yura",
+                "text": "My heart sways every time we laugh"
+            },
+            {
+                "song": "Only One Story",
+                "text": "This chapter shines because we move"
+            },
+            {
+                "song": "Take It Slow",
+                "text": "Even resting feels fun with you"
+            },
+            {
+                "song": "Blue Paradise",
+                "text": "Even blue days still move forward"
+            },
+            {
+                "song": "Never Say Never",
+                "text": "We rise again with louder steps"
+            },
+            {
+                "song": "Goosebump",
+                "text": "Feel the energy running through us"
+            },
+            {
+                "song": "ICONIC",
+                "text": "Every move we make stays unforgettable"
+            },
+            {
+                "song": "Promise",
+                "text": "Let’s keep moving together"
+            }
+        ]
+    },
+    "zeroni_gunini_2.jpg": {
+        "name": "Park Gunwook",
+        "image": "gunwook.jpg",
+        "role": "Powerful Ace · Intense Performer · Emotional Strength",
+        "lyrics": [
+            {
+                "song": "In Bloom",
+                "text": "I’ll stand strong at the start of this story"
+            },
+            {
+                "song": "New Kidz on the Block",
+                "text": "Feel the power when we hit the floor"
+            },
+            {
+                "song": "Back to ZEROBASE",
+                "text": "From zero, we fight our way up"
+            },
+            {
+                "song": "And I",
+                "text": "Even my silence holds strength"
+            },
+            {
+                "song": "Our Season",
+                "text": "This season tests how strong we are"
+            },
+            {
+                "song": "Melting Point",
+                "text": "Stronger than yesterday, for you"
+            },
+            {
+                "song": "CRUSH (가시와운)",
+                "text": "I won’t break even if it hurts"
+            },
+            {
+                "song": "Good Night",
+                "text": "I’ll guard you through the dark"
+            },
+            {
+                "song": "HELLO",
+                "text": "I’ll be your strength when you hesitate"
+            },
+            {
+                "song": "Feel the POP",
+                "text": "Feel the beat hit harder"
+            },
+            {
+                "song": "Good So Bad",
+                "text": "This pain makes me stronger"
+            },
+            {
+                "song": "Cinema Paradise",
+                "text": "This scene needs a fearless heart"
+            },
+            {
+                "song": "Dear ECLIPSE",
+                "text": "I will protect you until the end of the world"
+            },
+            {
+                "song": "Take My Hand",
+                "text": "If you fall, I’ll pull you up"
+            },
+            {
+                "song": "Yura Yura",
+                "text": "I’ll steady you when the world sways"
+            },
+            {
+                "song": "Future Perfect",
+                "text": "I break through what blocks the way"
+            },
+            {
+                "song": "Only One Story",
+                "text": "I carry this story with strength"
+            },
+            {
+                "song": "Blue Paradise",
+                "text": "I endure the blue and keep going"
+            },
+            {
+                "song": "Never Say Never",
+                "text": "I don’t retreat, I advance"
+            },
+            {
+                "song": "ICONIC",
+                "text": "Power defines every move I make"
+            },
+            {
+                "song": "Goosebump",
+                "text": "Feel the force when I step in"
+            }
+        ]
+    },
+    "zeroni_yunini_2.jpg": {
+        "name": "Han Yujin",
+        "image": "yujin.jpg",
+        "role": "Radiant Maknae",
+        "lyrics": [
+            {
+                "song": "New Kidz on the Block",
+                "text": "Running running running, to where you are."
+            },
+            {
+                "song": "Yura Yura",
+                "text": "I'm growing up fast to protect you too."
+            },
+            {
+                "song": "In Bloom",
+                "text": "We shine brighter the more we run together."
+                
+            },
+            {
+                "song": "And I",
+                "text": "This moment feels like the start of everything." 
+            },
+            {
+                "song": "Back to ZEROBASE",
+                "text": "Step by step, I’m becoming someone new."
+                
+            },
+            {
+                "song": "CRUSH (가시)",
+                "text": "Even if I stumble, I won’t stop moving forward."
+                
+            },
+            {
+                "song": "Take My Hand",
+                "text": "I’m not a kid anymore, I’ll prove it."
+                
+            },
+            {
+                "song": "Good Night",
+                "text": "Every today becomes a memory of growth."
+            },
+            {
+                "song": "Always",
+                "text": "We laugh, we fall, we grow together."
+            },
+            {
+                "song": "Sunday RIDE",
+                "text": "This road feels brighter because you’re here."
+                
+            },
+            {
+                "song": "Our Season",
+                "text": "This season of youth will shine forever."
+                
+            },
+            {
+                "song": "Feel the POP",
+                "text": "Jump into the moment, feel the pop of youth."
+                
+            },
+            {
+                "song": "SWEAT",
+                "text": "Sweat, laugh, and grow under the same sun."
+            }
+        ]
+    }
+}

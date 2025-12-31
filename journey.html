@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Journey of ZB1 - ZEROSE Gift</title>
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="nav-list">
+            <li><a href="index.html">Home & Gift 🎁</a></li>
+            <li><a href="journey.html">History Journey 📜</a></li>
+        </ul>
+    </nav>
+
+    <div class="cinema-wrapper">
+        
+        <div class="cinema-bg" id="cinema-bg"></div>
+        <div class="cinema-overlay"></div>
+
+        <div class="cinema-container">
+            
+            <div class="cinema-header">
+                <span class="year-badge" id="cinema-year">LOADING...</span>
+                <h1 id="cinema-title">THE JOURNEY</h1>
+            </div>
+
+            <div class="cinema-stage">
+                <button id="prev-slide" class="nav-btn prev"><i class="fa-solid fa-chevron-left"></i></button>
+                
+                <div class="visual-box">
+                    <div class="loader"></div>
+                    <img id="cinema-img" src="" alt="History" class="img-loading">
+                </div>
+
+                <button id="next-slide" class="nav-btn next"><i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+
+            <div class="cinema-desc-box">
+                <p id="cinema-desc">Loading data...</p>
+            </div>
+
+            <div class="timeline-indicators" id="indicators"></div>
+
+            <div class="cinema-actions">
+                <a href="index.html" class="action-btn"><i class="fa-solid fa-music"></i> Back to Home</a>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
